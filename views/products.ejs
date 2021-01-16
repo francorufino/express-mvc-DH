@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <p>Welcome to
+        <%= title %>
+    </p>
+    <% products.forEach(function(product){ %>
+        <br> Nome:
+        <%= product.name %>
+            Tipo:
+            <%= product.type %>
+                <% }) %><br>
+
+</body>
+
+</html>
