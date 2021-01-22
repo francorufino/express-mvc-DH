@@ -6,5 +6,5 @@ function getProducts() {
     return productsData;
 }
 module.exports = {
-    getProducts: getProducts,
+    getProducts: getProducts
 }
