@@ -4,10 +4,6 @@ const model = require("../model/products");
 
 const router = express.Router();
 
-
-
-
-
 router.get("/", function(req, res, next) {
     res.render("products", {
         title: "produtos",
