@@ -2,25 +2,40 @@
 <html>
 
 <head>
-    <title>
-        <title>pagina de produtos</title>
-        <!--<%= title %>-->
-    </title>
+    <title>Pagina Principal</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-    <h1>
-        pagina de produtos
-        <!--<%= title %>-->
-    </h1>
-    <!--<p>Welcome to
-        <%= title %>
-    </p>-->
-    <p>Paragrafo</p>
-    <p></p>
+    <header>
+        <a href="/">Home</a>
+        <a href="/products">Produtos</a>
+        <a href="/about">Acessar Sobre</a>
+    </header>
 
-
+    <main>
+        <h1>Minha loja de Produtos</h1>
+        <div class="content">
+            <section class="about">
+                <h3>Sobre nós</h3>
+                <p>Somos um site com mais de 10 anos de experiencia, já atendemos diversos clientes</p>
+            </section>
+            <section class="benefits">
+                <div class="row">
+                    <div class="box">
+                        <h2>Cadastro de produtos</h2>
+                        <p>Dentro do nosso site, você poderá cadastrar produtos que estão disponiveis na sua loja</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">
+                        <h2>Listagem de produtos</h2>
+                        <p>Dentro do nosso site, você poderá visualizar todos os produtos que você tem cadastrado</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
