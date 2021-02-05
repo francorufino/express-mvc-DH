@@ -17,31 +17,3 @@ header a {
 header a:hover {
     border-bottom: 2px solid #ff1500;
 }
-
-.box {
-    border: 1px solid #323639;
-    height: 350px;
-    width: 550px;
-    padding: 16px;
-}
-
-.custom-row {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.custom-row:nth-child(even) {
-    justify-content: flex-start;
-}
-
-.content {
-    display: flex;
-}
-
-.about {
-    flex-basis: 30%;
-}
-
-.benefits {
-    flex-basis: 70%;
-}
