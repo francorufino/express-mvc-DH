@@ -7,116 +7,40 @@
 </head>
 
 <body>
-    <header>
-        <a href="/">Home</a>
-        <a href="/products">Products</a>
-        <a href="/about">Acessar Sobre</a>
-    </header>
-    <h1>Produtos</h1>
-    <main>
-        <h2>
-            Cadastro de produtos
-        </h2>
-        <form action="">
-            <div>
-                <label for="name">Nome do produto</label>
-                <input name="name" id="name" type="text">
-            </div>
-            <div>
-                <label for="price">Preço do produto</label>
-                <input name="price" id="price" type="number">
-            </div>
-            <div>
-                <div><label for="">Tipo de produto:</label></div>
-                <div></div>
-                <input type="radio" name="type" id="eletronic">
-                <label for="eletronic">Eletrônico</label>
-                <input type="radio" name="type" id="food">
-                <label for="food">Alimentício</label>
-                <input type="radio" name="type" id="drugs">
-                <label for="drugs">Farmacêutico</label>
-            </div>
-            <div>
-                <input type="submit" value="Cadastrar Produto">
-                <input type="reset" value="Cancelar">
-            </div>
-        </form>
-    </main>
+    <%- include('./partials/header') %>
+
+        <h1>
+            <%= name %>
+        </h1>
+        <main>
+            <h2>Cadastro de produtos</h2>
+
+            <form action="" method="POST">
+                <div>
+                    <label for="name">Nome do produto:</label>
+                    <input name="name" id="name" type="text">
+                </div>
+                <div>
+                    <label for="price">Preço do produto:</label>
+                    <input name="price" id="price" type="number">
+                </div>
+                <div>
+                    <div>
+                        <label>Tipo de produto:</label>
+                    </div>
+
+                    <% types.forEach(function(type) {%>
+                        <input type="radio" name="type" id="<%= type.id %>" value="<%= type.id%>">
+                        <label for="<%= type.id %>"> <%= type.label %> </label>
+                        <%}) %>
+
+                </div>
+                <div>
+                    <input type="submit" value="Cadastrar produto">
+                    <input type="reset" value="Cancelar">
+                </div>
+            </form>
+        </main>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>pagina de produtos</title>
-</head>
-
-<body>
-    <h1>Produtos</h1>
-    <a href="/about">Acessar Sobre</a>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/512px-Circle-icons-profile.svg.png" width="200" height="200" alt="Magalu em frente a loja da Magazine Luiza" />
-    <p>
-        Meu nome é: <strong>Vitor</strong><br> Idade: <strong>25</strong><br> Estado civil: <strong>Casado</strong>
-    </p>
-    <h3>Qualidades</h3>
-    <ul>
-        <li>Jogo bem video game</li>
-        <li>Sou programador</li>
-    </ul>
-
-    <ol type="I" start="20">
-        <li>Sei cozinhar</li>
-        <li>Sei jogar bola</li>
-    </ol>
-</body>
-
-</html>-->
-
-<!--<!DOCTYPE html>
-<html>
-
-<head>
-    <title>
-        <%= title %>
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body>
-    <h1>
-        <%= title %>
-    </h1>
-    <p>Welcome to
-        <%= title %>
-    </p>
-    <% products.forEach(function(product){ %>
-        <br> Nome:
-        <%= product.name %>
-            Tipo:
-            <%= product.type %>
-                <% }) %><br>
-
-</body>
-
-</html>-->
